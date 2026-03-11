@@ -39,6 +39,7 @@ body {
   position: relative;
 }
 
+/* floating glow blobs */
 body::before,
 body::after {
   content: "";
@@ -47,7 +48,7 @@ body::after {
   height: 22rem;
   border-radius: 50%;
   filter: blur(70px);
-  z-index: -1;
+  z-index: -3;
   opacity: 0.55;
   animation: floatGlow 10s ease-in-out infinite;
 }
@@ -74,11 +75,12 @@ body::after {
   }
 }
 
+/* sparkles */
 .sparkles {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: -1;
+  z-index: -2;
 }
 
 .sparkles span {
@@ -97,15 +99,65 @@ body::after {
 .sparkles span:nth-child(4) { top: 52%; left: 82%; animation-delay: 1.5s; }
 .sparkles span:nth-child(5) { top: 70%; left: 25%; animation-delay: 0.5s; }
 .sparkles span:nth-child(6) { top: 78%; left: 66%; animation-delay: 2.5s; }
+.sparkles span:nth-child(7) { top: 12%; left: 55%; animation-delay: 3s; }
+.sparkles span:nth-child(8) { top: 62%; left: 48%; animation-delay: 1.8s; }
+.sparkles span:nth-child(9) { top: 88%; left: 14%; animation-delay: 2.2s; }
+.sparkles span:nth-child(10) { top: 30%; left: 90%; animation-delay: 0.8s; }
 
 @keyframes twinkle {
   0%, 100% {
-    opacity: 0.25;
+    opacity: 0.2;
     transform: scale(1);
   }
   50% {
-    opacity: 0.9;
-    transform: scale(1.8);
+    opacity: 0.95;
+    transform: scale(1.9);
+  }
+}
+
+/* tiny drifting stars */
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.stars span {
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.45);
+  animation: driftStar linear infinite;
+}
+
+.stars span:nth-child(1) { top: 8%; left: 8%; animation-duration: 18s; }
+.stars span:nth-child(2) { top: 20%; left: 34%; animation-duration: 22s; }
+.stars span:nth-child(3) { top: 12%; left: 62%; animation-duration: 20s; }
+.stars span:nth-child(4) { top: 30%; left: 82%; animation-duration: 24s; }
+.stars span:nth-child(5) { top: 48%; left: 15%; animation-duration: 19s; }
+.stars span:nth-child(6) { top: 55%; left: 44%; animation-duration: 23s; }
+.stars span:nth-child(7) { top: 64%; left: 72%; animation-duration: 18s; }
+.stars span:nth-child(8) { top: 82%; left: 26%; animation-duration: 21s; }
+.stars span:nth-child(9) { top: 74%; left: 58%; animation-duration: 25s; }
+.stars span:nth-child(10) { top: 90%; left: 84%; animation-duration: 20s; }
+
+@keyframes driftStar {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateY(-12px) translateX(6px);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.35;
   }
 }
 
@@ -129,7 +181,14 @@ body::after {
   font-size: 1.2rem;
   font-weight: 700;
   white-space: nowrap;
-  text-shadow: 0 0 10px rgba(244, 194, 215, 0.22);
+  text-shadow:
+    0 0 10px rgba(244, 194, 215, 0.22),
+    0 0 18px rgba(203, 182, 255, 0.18);
+  letter-spacing: 0.5px;
+}
+
+.nav-logo .logo-accent {
+  color: var(--lavender);
 }
 
 .nav-links {
@@ -173,6 +232,21 @@ body::after {
 .hero {
   padding: 6rem 2rem 4rem;
   text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(244, 194, 215, 0.4),
+    rgba(203, 182, 255, 0.4),
+    transparent
+  );
 }
 
 .hero-text {
@@ -394,11 +468,12 @@ body::after {
 .quest-card:hover,
 .tool-card:hover,
 .gallery-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(244, 194, 215, 0.32);
+  transform: translateY(-7px);
+  border-color: rgba(244, 194, 215, 0.36);
   box-shadow:
-    0 0 18px rgba(244, 194, 215, 0.12),
-    0 0 28px rgba(203, 182, 255, 0.08);
+    0 0 18px rgba(244, 194, 215, 0.15),
+    0 0 30px rgba(203, 182, 255, 0.12),
+    inset 0 0 18px rgba(255, 255, 255, 0.02);
 }
 
 .project-card h3,
@@ -483,6 +558,34 @@ body::after {
   font-style: italic;
 }
 
+/* moon divider */
+.moon-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.25rem 0;
+}
+
+.moon-divider .line {
+  height: 1px;
+  width: 100%;
+  max-width: 180px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(244, 194, 215, 0.45),
+    rgba(203, 182, 255, 0.45),
+    transparent
+  );
+}
+
+.moon-divider .moon {
+  color: var(--lavender);
+  font-size: 1.1rem;
+  text-shadow: 0 0 12px rgba(203, 182, 255, 0.25);
+}
+
 footer {
   text-align: center;
   padding: 1.5rem 1rem 2rem;
@@ -523,5 +626,9 @@ footer {
 
   .nav-links a {
     font-size: 0.9rem;
+  }
+
+  .moon-divider .line {
+    max-width: 90px;
   }
 }
