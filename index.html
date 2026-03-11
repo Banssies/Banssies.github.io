@@ -8,12 +8,17 @@
 </head>
 <body>
   <div class="sparkles" aria-hidden="true">
-    <span></span><span></span><span></span>
-    <span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="stars" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
   </div>
 
   <nav class="navbar">
-    <div class="nav-logo">🦇 Bans</div>
+    <div class="nav-logo">🦇 <span class="logo-accent">Bans</span></div>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -27,19 +32,25 @@
   </nav>
 
   <header class="hero">
-    <div class="hero-text">
+    <div class="floating-bat" aria-hidden="true">🦇</div>
+    <div class="hero-text hero-copy">
       <p class="eyebrow">pastel vampire • gamer nerd • web dev in progress</p>
       <h1>Banssies</h1>
+      <p class="hero-role">Creative front-end learner building soft, immersive, gamer-inspired web spaces.</p>
       <p class="tagline">
-        Also known as Bans — coding by moonlight, gaming by instinct, and building
-        dreamy little corners of the internet with pastel fangs and gamer heart.
+        Also known as Bans — I love thoughtful interfaces, dreamy aesthetics,
+        and turning personality into something visual, usable, and alive.
       </p>
-      <a href="projects.html" class="hero-btn">View My Projects</a>
+
+      <div class="hero-actions">
+        <a href="projects.html" class="hero-btn">View Projects</a>
+        <a href="contact.html" class="secondary-btn">Contact Me</a>
+      </div>
     </div>
   </header>
 
   <main class="page-layout">
-    <section class="card">
+    <section class="card reveal">
       <h2>Welcome to My Lair</h2>
       <p>
         Hi, I’m Nahlla — also known as Banssies, or just Bans. I’m a creative
@@ -52,7 +63,13 @@
       </p>
     </section>
 
-    <section class="card">
+    <div class="moon-divider" aria-hidden="true">
+      <span class="line"></span>
+      <span class="moon">☾</span>
+      <span class="line"></span>
+    </div>
+
+    <section class="card reveal">
       <h2>Currently Obsessed</h2>
       <div class="project-grid">
         <article class="project-card">
@@ -75,7 +92,13 @@
       </div>
     </section>
 
-    <section class="card">
+    <div class="moon-divider" aria-hidden="true">
+      <span class="line"></span>
+      <span class="moon">☾</span>
+      <span class="line"></span>
+    </div>
+
+    <section class="card reveal">
       <h2>Explore My World</h2>
       <div class="project-grid">
         <article class="project-card">
@@ -107,7 +130,13 @@
       </div>
     </section>
 
-    <section class="card">
+    <div class="moon-divider" aria-hidden="true">
+      <span class="line"></span>
+      <span class="moon">☾</span>
+      <span class="line"></span>
+    </div>
+
+    <section class="card reveal">
       <h2>Quick Stats</h2>
       <div class="stats-grid">
         <div class="stat-box">
@@ -133,5 +162,7 @@
   <footer>
     <p>© 2026 Banssies • made with moonlight, code, and caffeine</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

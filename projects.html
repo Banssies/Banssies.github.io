@@ -8,12 +8,17 @@
 </head>
 <body>
   <div class="sparkles" aria-hidden="true">
-    <span></span><span></span><span></span>
-    <span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="stars" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
   </div>
 
   <nav class="navbar">
-    <div class="nav-logo">🦇 Bans</div>
+    <div class="nav-logo">🦇 <span class="logo-accent">Bans</span></div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -27,15 +32,15 @@
   </nav>
 
   <main class="page-layout page-top">
-    <section class="card">
+    <section class="card reveal">
       <h1 class="page-title">Projects</h1>
       <p>
-        These are some of the things I’m building as I grow my web dev and design
-        skills.
+        These projects reflect my growth in web development, design, and building
+        themed digital spaces with personality.
       </p>
     </section>
 
-    <section class="card">
+    <section class="card reveal">
       <div class="project-grid">
         <article class="project-card">
           <h3>✦ Aether</h3>
@@ -44,24 +49,36 @@
             with softer guidance, structure, and care.
           </p>
           <span class="project-tag">concept design</span>
+          <div class="project-actions">
+            <a href="blog.html" class="project-link">View Notes</a>
+            <a href="contact.html" class="project-link">Ask Me About It</a>
+          </div>
         </article>
 
         <article class="project-card">
           <h3>🦇 GitHub.io Portfolio</h3>
           <p>
-            My personal website built to reflect my style through pastel gothic
-            visuals, gamer references, and cozy interface design.
+            My personal portfolio site built with pastel gothic visuals, gamer
+            references, glowing effects, and multi-page structure.
           </p>
           <span class="project-tag">personal site</span>
+          <div class="project-actions">
+            <a href="index.html" class="project-link">Live View</a>
+            <a href="gallery.html" class="project-link">See Gallery</a>
+          </div>
         </article>
 
         <article class="project-card">
           <h3>🎨 Future UI/UX Projects</h3>
           <p>
-            More layouts, prototypes, and little digital spaces that feel
+            More layouts, prototypes, and interface experiments designed to feel
             expressive, elegant, and alive.
           </p>
           <span class="project-tag">coming soon</span>
+          <div class="project-actions">
+            <a href="playbook.html" class="project-link">My Tools</a>
+            <a href="quest-log.html" class="project-link">Track Progress</a>
+          </div>
         </article>
       </div>
     </section>
@@ -70,5 +87,7 @@
   <footer>
     <p>© 2026 Banssies • coded with soft chaos</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -844,3 +844,125 @@ footer {
     transform: translateY(-10px) translateX(2px) rotate(-3deg);
   }
 }
+/* scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* cleaner professional hero actions */
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+
+.secondary-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-main);
+  padding: 0.75rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(203, 182, 255, 0.2);
+  background: rgba(255, 255, 255, 0.03);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.secondary-btn:hover {
+  transform: translateY(-3px);
+  border-color: rgba(244, 194, 215, 0.3);
+  box-shadow:
+    0 0 16px rgba(244, 194, 215, 0.12),
+    0 0 24px rgba(203, 182, 255, 0.08);
+}
+
+/* project action buttons */
+.project-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.project-link {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: linear-gradient(
+    135deg,
+    rgba(244, 194, 215, 0.14),
+    rgba(203, 182, 255, 0.14)
+  );
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.project-link:hover {
+  transform: translateY(-3px);
+  border-color: rgba(244, 194, 215, 0.32);
+  box-shadow:
+    0 0 16px rgba(244, 194, 215, 0.14),
+    0 0 24px rgba(203, 182, 255, 0.1);
+}
+
+/* contact links */
+.contact-link {
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(244, 194, 215, 0.2);
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.contact-link:hover {
+  color: var(--pink);
+  border-color: rgba(244, 194, 215, 0.5);
+}
+
+/* slightly more polished hero text width */
+.hero-copy {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.hero-role {
+  color: var(--lavender);
+  font-size: 1rem;
+  margin-bottom: 0.9rem;
+  letter-spacing: 0.6px;
+}
+
+/* gallery real image support for later */
+.gallery-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(244, 194, 215, 0.15);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gallery-card:hover .gallery-image {
+  transform: scale(1.03);
+  box-shadow:
+    0 0 16px rgba(244, 194, 215, 0.12),
+    0 0 24px rgba(203, 182, 255, 0.08);
+}
+
+@media (max-width: 700px) {
+  .hero-actions,
+  .project-actions {
+    justify-content: center;
+  }
+}

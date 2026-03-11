@@ -8,12 +8,17 @@
 </head>
 <body>
   <div class="sparkles" aria-hidden="true">
-    <span></span><span></span><span></span>
-    <span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="stars" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
   </div>
 
   <nav class="navbar">
-    <div class="nav-logo">🦇 Bans</div>
+    <div class="nav-logo">🦇 <span class="logo-accent">Bans</span></div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -27,25 +32,35 @@
   </nav>
 
   <main class="page-layout page-top">
-    <section class="card">
+    <section class="card reveal">
       <h1 class="page-title">Contact</h1>
       <p>
-        I’m still building out my little corner of the internet, but you can
-        find me through my GitHub and future project spaces.
+        Thanks for visiting my site. You can find me through my GitHub and other
+        project spaces below.
       </p>
     </section>
 
-    <section class="card">
+    <section class="card reveal">
       <h2>Find Me</h2>
       <div class="stats-grid">
         <div class="stat-box">
           <span class="stat-title">GitHub</span>
-          <span class="stat-value">https://github.com/Banssies</span>
+          <span class="stat-value">
+            <a class="contact-link" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener noreferrer">
+              github.com/YOUR-USERNAME
+            </a>
+          </span>
         </div>
+
         <div class="stat-box">
           <span class="stat-title">Email</span>
-          <span class="stat-value">BansButtons@gmail,com</span>
+          <span class="stat-value">
+            <a class="contact-link" href="mailto:youremail@example.com">
+              youremail@example.com
+            </a>
+          </span>
         </div>
+
         <div class="stat-box">
           <span class="stat-title">Status</span>
           <span class="stat-value">Usually coding, gaming, or styling a page too much</span>
@@ -53,10 +68,10 @@
       </div>
     </section>
 
-    <section class="card">
+    <section class="card reveal">
       <h2>Little Note</h2>
       <p class="contact-note">
-        Thanks for visiting my site — this is only the beginning, and there’s
+        Thanks for stopping by the lair — this site is still growing, and there’s
         definitely more pastel vampire nonsense on the way.
       </p>
     </section>
@@ -65,5 +80,7 @@
   <footer>
     <p>© 2026 Banssies • thanks for stopping by the lair</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
