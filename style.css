@@ -83,3 +83,11 @@ button {
 button:hover {
   background-color: #ffd6f6;
 }
+h1 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+p {
+  font-weight: 300;
+}
